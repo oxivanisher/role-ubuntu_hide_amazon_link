@@ -1,0 +1,13 @@
+---
+
+- name: create empty directory in skel
+  file:
+    path: /etc/skel/.local/share/applications/
+    state: directory
+    mode: 0755
+
+- name: copy file to skel directory
+  template:
+    src: files/ubuntu-amazon-default.desktop
+    dest: /etc/skel/.local/share/applications/
+
