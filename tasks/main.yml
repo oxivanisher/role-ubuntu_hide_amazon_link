@@ -1,13 +1,12 @@
 ---
 
-- name: create empty directory in skel
-  file:
-    path: /etc/skel/.local/share/applications/
-    state: directory
-    mode: 0755
+- name: remove ubuntu-web-launchers package (to remove amazon spam)
+  package:
+    name: ubuntu-web-launchers
+    state: absent
 
-- name: copy file to skel directory
-  template:
-    src: files/ubuntu-amazon-default.desktop
-    dest: /etc/skel/.local/share/applications/
+- name: remove remaining .desktop file if required
+  file:
+   path: /etc/skel/.local/share/applications/ubuntu-amazon-default.desktop
+   state: absent
 
