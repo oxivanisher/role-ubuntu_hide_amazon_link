@@ -7,5 +7,5 @@
 
 - name: remove remaining .desktop file if required
   ansible.builtin.file:
-   path: /etc/skel/.local/share/applications/ubuntu-amazon-default.desktop
-   state: absent
+    path: /etc/skel/.local/share/applications/ubuntu-amazon-default.desktop
+    state: absent
