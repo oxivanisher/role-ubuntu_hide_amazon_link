@@ -1,5 +1,6 @@
 galaxy_info:
   ansible_role: ubuntu_hide_amazon_link
+  namespace: oxivanisher
   author: Marc Urben
   description: remove amazon spam from ubuntu desktop
   company: Thunderbluff
