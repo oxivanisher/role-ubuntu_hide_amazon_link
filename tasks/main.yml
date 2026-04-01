@@ -1,15 +1,12 @@
 ---
-
 - name: Remove ubuntu-web-launchers package (to remove amazon spam)
   ansible.builtin.package:
     name: ubuntu-web-launchers
     state: absent
   become: true
-  become_user: root
 
 - name: Remove remaining .desktop file if required
   ansible.builtin.file:
     path: /etc/skel/.local/share/applications/ubuntu-amazon-default.desktop
     state: absent
   become: true
-  become_user: root
